@@ -1,5 +1,6 @@
 package com.kh.practice.run;
 
+import com.kh.practice.func.ControlPractice;
 import com.kh.practice.func.OperatorPractice;
 
 public class Run {
@@ -10,8 +11,11 @@ public class Run {
 //		CastingPractice cp = new CastingPractice();
 //		cp.method3();
 		
-		OperatorPractice op = new OperatorPractice();
-		op.method5();
+//		OperatorPractice op = new OperatorPractice();
+//		op.method10();
+		
+		ControlPractice cp = new ControlPractice();
+		cp.method1();
 		
 	}
 }

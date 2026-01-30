@@ -97,9 +97,77 @@ public class OperatorPractice {
 	}
 	
 	public void method7() {
+		Scanner  sc = new Scanner(System.in);
 		
+		System.out.print("국어 : ");
+		int kor = sc.nextInt();
+		System.out.print("영어 : ");
+		int eng = sc.nextInt();
+		System.out.print("수학 : ");
+		int mat = sc.nextInt();
+		int sum = kor+eng+mat;
+		
+		System.out.printf("합계 : %d\n",sum);
+		int avg = (kor+eng+mat)/3;
+		System.out.println("평균 : "+avg);
+		
+		if(kor>=40 && eng>=40 && mat>=40 || avg>=60) {
+			System.out.println("합격");
+		} else {
+			System.out.println("불합격");
+		}
+	}
+	public void method8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("주민번호를 입력하세요 (-)포함 : ");
+		String num = sc.next();
+		char ch = num.charAt(7);
+		
+		if(ch == '1' || ch == '3') {
+			System.out.println("남자");
+		} else if(ch == '2' || ch == '4') {
+			System.out.println("여자");
+		} else {
+			System.out.println("주민번호를 잘못 입력했습니다.");
+		}
 	}
 	
-	
-
+	public void method9() {	
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수1 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수2 : ");
+		int num2 = sc.nextInt();
+		
+		if(num1 < num2) {
+			System.out.print("입력 : ");
+			int num3 = sc.nextInt();
+				if(num3 <= num1 || num3 > num2) {
+					System.out.println("true");
+				} else {
+					System.out.println("false");
+				}
+		} else {
+			System.out.println("다시 입력하세요");
+			
+		}
+	}
+	public void method10() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("입력1 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("입력2 : ");
+		int num2 = sc.nextInt();
+		
+		System.out.print("입력3 : ");
+		int num3 = sc.nextInt();
+		
+		if(num1 == num2 && num2 == num3) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+	}
 }
