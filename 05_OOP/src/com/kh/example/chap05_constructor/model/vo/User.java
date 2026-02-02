@@ -6,6 +6,18 @@ public class User {
 	private int age;
 	private double point;
 	
+	//생성자를 만들고 하는것이 안전하다
+	//기본 생성자
+	public User(){}
+	
+	//매개변수 있는 생성자
+	public User(String id, String name, int nai, double p) {
+		userId = id;
+		userName = name;
+		age = nai;
+		point = p;
+	}
+	
 	//출력용 메소드
 	public void inform() {
 		System.out.printf("%s, %s, %d, %f\n", userId, userName, age, point);
