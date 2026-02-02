@@ -15,7 +15,10 @@ public class Run {
 //		op.method10();
 		
 		ControlPractice cp = new ControlPractice();
-		cp.method1();
+		cp.method4();
+		
+		
+		
 		
 	}
 }

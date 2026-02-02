@@ -1,4 +1,4 @@
-package com.kh.example.chap06_method.controller.run;
+package com.kh.example.chap06_method.run;
 
 import java.util.Arrays;
 
@@ -7,6 +7,7 @@ import com.kh.example.chap06_method.controller.MethodPractice;
 import com.kh.example.chap06_method.model.vo.Trainee;
 
 public class Run {
+
 	public static void main(String[] args) {
 		MethodPractice mp = new MethodPractice();
 		mp.method1();
