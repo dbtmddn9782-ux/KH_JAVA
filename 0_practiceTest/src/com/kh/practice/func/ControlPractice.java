@@ -108,7 +108,34 @@ public class ControlPractice {
 	}
 	
 	public void method5() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		System.out.print("비밀번호 : ");
+		String pwd = sc.nextLine();
 		
+		
+		if(id.equals("myId")) {
+			if(pwd.equals("myPassword12")) {
+				System.out.println("로그인 성공");
+			} else {
+				System.out.println("비밀번호 오류");
+			}
+		} else {
+			System.out.println("아이디 오류");
+		}
+	}
+	
+	public void method6() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("권한을 확인하고자 하는 등급 : ");
+		String grade = sc.nextLine();
+		
+		if(grade.equals("관리자")) {
+			System.out.println("회원관리, 게시글관리, 게시글작성, 게시글조회, 댓글작성");
+		} else if (grade.equals("회원")) {
+			System.out.println("게시글작성, 게시글조회, 댓글작성");
+		} else 
 	}
 	
 	
