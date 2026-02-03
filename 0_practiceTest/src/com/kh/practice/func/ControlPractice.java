@@ -135,7 +135,9 @@ public class ControlPractice {
 			System.out.println("회원관리, 게시글관리, 게시글작성, 게시글조회, 댓글작성");
 		} else if (grade.equals("회원")) {
 			System.out.println("게시글작성, 게시글조회, 댓글작성");
-		} else 
+		} else {
+			
+		}
 	}
 	
 	
