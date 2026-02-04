@@ -25,9 +25,11 @@ public class Parent {
 	}
 	
 	public void printParent() {
-		System.out.println("나 부모");
+		System.out.println("나 부모야");
 	}
-	
+	public void print() {
+		System.out.println("Parent");
+	}
 	
 
 }

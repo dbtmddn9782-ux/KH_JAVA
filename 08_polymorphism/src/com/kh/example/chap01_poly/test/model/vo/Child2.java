@@ -1,6 +1,6 @@
 package com.kh.example.chap01_poly.test.model.vo;
 
-public class Child2 extends Parent{
+public class Child2 extends Parent {
 	private int n;
 	
 	public Child2() {}
@@ -18,6 +18,11 @@ public class Child2 extends Parent{
 	
 	public void printChild2() {
 		System.out.println("나 두 번째 자식이야");
+	}
+	
+	@Override
+	public void print() {
+		System.out.println("CHild2");
 	}
 
 }
