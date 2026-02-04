@@ -7,5 +7,5 @@ public class Run {
 //		AnimalController ac = new AnimalController();
 //		ac.method();
 		new AnimalController().method();
-	}
+	}	
 }
