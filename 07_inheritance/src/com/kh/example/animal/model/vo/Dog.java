@@ -27,7 +27,7 @@ public class Dog extends Animal {
 	public void setHair(String hair) {
 		this.hair = hair;
 	}
-	
+	@Override //override 검사용
 	public String inform() {
 		return super.inform() +" " + height + " " + hair;
 	}

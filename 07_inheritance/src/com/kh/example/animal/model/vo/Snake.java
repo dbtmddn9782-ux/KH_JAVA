@@ -17,7 +17,7 @@ public class Snake extends Animal {
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
-	
+	@Override
 	public String inform() {
 		return super.inform() + " " + pattern;
 	}
