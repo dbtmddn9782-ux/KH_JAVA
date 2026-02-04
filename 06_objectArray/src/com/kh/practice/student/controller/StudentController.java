@@ -18,20 +18,24 @@ public class StudentController {
 		
 	}
 	public Student[] printStudent() {
-		for(int i = 0; i < sArr.length; i++) {
-			System.out.println(sArr[i].inform());
-		}
 		return sArr;
 	
 }
 	public int sumScore() {
-		for(int i = 0; i < sArr.length; i++) {
-			System.out.println(sArr[i].score);
+		int sum = 0;
+		for(int i = 0; i< sArr.length;i++) {
+			sum += sArr[i].getScore();
 		}
+		return sum;
 		
 	}
 	
 	public double[] avgScore() {
+		double[]sumAvg = new double[2];
+		sumAvg[0] = sumScore();
+		sumAvg[1] = sumScore()/sArr.length;
+		
+		return sumAvg;
 		
 	}
 	
