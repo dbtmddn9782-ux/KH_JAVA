@@ -5,7 +5,7 @@ public class Child1 {
 	
 	public Child1() {}
 	
-	public void setChild1(String str) {
+	public void setStr(String str) {
 		this.str = str;
 	}
 	public String getStr() {
