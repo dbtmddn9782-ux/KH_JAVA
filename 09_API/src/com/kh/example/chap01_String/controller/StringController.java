@@ -142,7 +142,7 @@ public class StringController {
 		System.out.println("분리된 문자열 개수 : " + st.countTokens());
 		
 		String splitStr2 = "Apple,Banana=Cream*Dessert#Egg Fruit";
-		String[] arr2 = splitStr2.split(",-*#");
+		String[] arr2 = splitStr2.split(",|-|\\*|#| ");
 		System.out.println("arr2.length : "+ arr2.length);
 		for(int i = 0;i < arr2.length;i++) {
 			System.out.println(arr[i]);
