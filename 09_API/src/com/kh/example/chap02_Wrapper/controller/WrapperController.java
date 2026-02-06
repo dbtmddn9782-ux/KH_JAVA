@@ -1,4 +1,4 @@
-package com.kh.example.chap01_Wrapper.controller;
+package com.kh.example.chap02_Wrapper.controller;
 
 public class WrapperController {
 	public void method() {
