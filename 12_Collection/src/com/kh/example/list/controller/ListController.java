@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.kh.example.list.model.compare.ListComparator;
+import com.kh.example.list.model.compare.StudentComparator;
 import com.kh.example.list.model.vo.Student;
-
 
 
 public class ListController {
@@ -23,11 +24,11 @@ public class ListController {
 		
 		// 장범 1. 크기 제약이 없다
 		// 특징 1. 저장 순서가 유지된다
-		list.add("정현종");
+		list.add("하현호");
 		System.out.println("list : "+list);
 		System.out.println("현재 list에 담긴 element 개수 : "+ list.size());
 		
-		list.add("윤치연");
+		list.add("문미미");
 		System.out.println("list : "+list);
 		System.out.println("현재 list에 담긴 element 개수 : "+ list.size());
 	
@@ -97,6 +98,47 @@ public class ListController {
 		System.out.println("list : " + list);
 		Collections.sort(list);
 		System.out.println("list : " + list);
+		
+		
+		Collections.sort(list, new ListComparator());
+		list.sort(new ListComparator());
+		System.out.println("list : " + list);
+		
+		
+		System.out.println(studentList);
+		
+		Collections.sort(studentList);
+		System.out.println(studentList);
+		
+		
+		
+		studentList.add(new Student("박길동", 66));
+		studentList.add(new Student("이길동", 88));
+		System.out.println(studentList);
+		studentList.sort(new StudentComparator());
+		System.out.println(studentList);
+		
+		String result = list.set(3, "박보배");
+		System.out.println("list : "+list);
+		System.out.println(result);
+		
+		String result2 = list.get(0);
+		System.out.println(result2);
+		System.out.println("list : "+list);
+		
+		System.out.println(list.contains("남나눔"));
+		System.out.println(list.indexOf("남나눔"));
+		System.out.println(list.contains("강건강"));
+		System.out.println(list.indexOf("강건강"));
+		
+		System.out.println(studentList.contains(new Student("이길동",88)));
+		System.out.println(studentList.indexOf(new Student("이길동",88)));
+		
+		System.out.println(list.isEmpty());
+		list.clear();
+		System.out.println("list : "+list);
+		System.out.println(list.isEmpty());
+		
 		
 	}
 
