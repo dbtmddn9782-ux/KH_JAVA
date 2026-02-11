@@ -1,6 +1,7 @@
 package com.kh.example.list.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.kh.example.list.model.vo.Student;
@@ -92,6 +93,10 @@ public class ListController {
 		   }
 		System.out.println(studentList);
 		
+		
+		System.out.println("list : " + list);
+		Collections.sort(list);
+		System.out.println("list : " + list);
 		
 	}
 
