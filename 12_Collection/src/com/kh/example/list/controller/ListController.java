@@ -1,0 +1,98 @@
+package com.kh.example.list.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.kh.example.list.model.vo.Student;
+
+
+
+public class ListController {
+	public void doList() {
+		List l = new ArrayList(); // 다형성 적용, 초기용량 10
+		// 제네릭 미사용함 즉, 타입 제한하지 않음, 즉 object타입
+	//	l.add(Object e) /l.get() : Object
+		
+		ArrayList<String> list = new ArrayList<String>(3);
+		list.add(new String("테스트"));
+		list.add("롤대남");
+		list.add("남나눔");
+		
+		System.out.println("list : "+list);
+		
+		// 장범 1. 크기 제약이 없다
+		// 특징 1. 저장 순서가 유지된다
+		list.add("정현종");
+		System.out.println("list : "+list);
+		System.out.println("현재 list에 담긴 element 개수 : "+ list.size());
+		
+		list.add("윤치연");
+		System.out.println("list : "+list);
+		System.out.println("현재 list에 담긴 element 개수 : "+ list.size());
+	
+		
+		// 장점 2. 추가/삭제/정렬 등의 기능 처리 간단하다
+		list.add(0, "류라라");
+		System.out.println("list : "+list);
+		
+		
+		list.add(3, "강건강");
+		System.out.println("list : "+list);
+		
+		String remove1 =list.remove(1);
+		System.out.println(remove1);
+		System.out.println("list : "+list);
+		
+		   for(int i = 0; i<list.size();i++) {
+		         String elem = list.get(i);
+		         if(elem.equals("강건강")) {
+		            list.remove(i);
+		            break; // 강건강이 여러명 있다고 가정하에 첫번째 강건강만 지우고싶으면 break;
+		         }
+		      }
+		
+		
+		   System.out.println("list : "+list);
+		
+		
+//		System.out.println(list.remove("강건강"));
+//		System.out.println("list : "+list);
+//		
+//		System.out.println(list.remove("테스트"));
+//		System.out.println("list : "+list);
+		
+		   // Student객체만 지정할 수 있는 ArrayList studentList 생성
+		   ArrayList<Student> studentList = new ArrayList<Student>();
+		   studentList.add(new Student("박보배", 100));
+		   studentList.add(new Student("강건강", 40));
+		   studentList.add(new Student("차청춘", 70));
+		   System.out.println(studentList);
+		   studentList.remove(new Student("박보배", 100));
+		   // remove에는 equlas가 있는데 이 equlas는 obj한테 상속 받은 것이다.
+		   // equlas는 주솟값을 비교 하는 메소드인데 add에서 new를 사용하여 heap 메모리에 새로운 객체를 만들고 주소를 받았지만
+		   // remove에서도 new를 사용해 heap메모리에 새로운 주소를 받아서 주소값이 달라 remove에서 삭제가 안된다.
+		   System.out.println(studentList);
+		   
+		   Student s1 = new Student("홍길동", 55);
+		   Student s2 = new Student("김길동", 44);
+		   Student s3 = new Student("이길동", 33);
+		   studentList.add(s1);
+		   studentList.add(s2);
+		   studentList.add(s3);
+		   System.out.println(studentList);
+		   
+		   studentList.remove(s2);
+		   System.out.println(studentList);
+		   
+		   for(int i = 0; i<studentList.size();i++) {
+			   Student s = studentList.get(i);
+			   if(s.getName().equals("홍길동")&& s.getScore() == 55) {
+				   studentList.remove(i);
+			   }
+		   }
+		System.out.println(studentList);
+		
+		
+	}
+
+}
