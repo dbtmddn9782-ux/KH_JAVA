@@ -1,8 +1,14 @@
 package com.kh.example.map.controller;
 
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
+import java.util.Properties;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -90,10 +96,59 @@ public class MapController {
 			map3.clear();
 			System.out.println("map3 : "+map3);
 			System.out.println(map3.isEmpty());
-			
-			
-			
 		}
+	
+	public void doProperties() {
+		Properties prop = new Properties();
+		prop.setProperty("채소","오이");
+		prop.setProperty("과일","사과");
+		prop.setProperty("간식","젤리");
+		prop.setProperty("채소","피망");
+		prop.setProperty("육류","삼겹살");
+		prop.setProperty("어류","고등어");
+		System.out.println(prop);
+		
+		System.out.println(prop.getProperty("채소"));
+		System.out.println(prop.getProperty("견과"));
+		System.out.println(prop.getProperty("채소", "땅콩"));
+		System.out.println(prop.getProperty("견과", "땅콩"));
+		
+	}
+	   public void fileSave() {
+		    //  try(FileOutputStream fos = new FileOutputStream("test.properties");) {
+		    try(FileOutputStream fos = new FileOutputStream("test.xml");) {
+		         Properties prop = new Properties();
+		         prop.setProperty("title", "Properties Practice");
+		         prop.setProperty("author", "Mr. HONG");
+		         prop.setProperty("publisher", "KH Academy");
+		         prop.setProperty("price", "15000");
+		         
+		       //  prop.store(fos,"20260212, Properties File Test");
+		         prop.storeToXML(fos,"20260212, XML File Test");
+		      } catch (FileNotFoundException e) {
+		         e.printStackTrace();
+		      } catch (IOException e1) {
+		         e1.printStackTrace();
+		      }
+		   }
+	   
+	   public void fileOpen() {
+		 // try(FileInputStream fis = new FileInputStream("test.properties");) {
+			  try(FileInputStream fis = new FileInputStream("test.XML");) {
+			  Properties prop = new Properties();
+			  System.out.println(prop);
+			  
+//			  prop.load(fis);
+			  prop.loadFromXML(fis);
+			  
+			  System.out.println(prop);
+		  } catch (FileNotFoundException e) {
+			e.printStackTrace();
+		  } catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		   
+	   }
 		
 
 		
