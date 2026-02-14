@@ -15,7 +15,7 @@ public class KindsOfVariable1 {// 클래스 영역
 	
 	public void method2() {
 		//System.out.println(localNum);
-		System.err.println(globalNum);
+		System.out.println(globalNum);
 	}
 	
 
