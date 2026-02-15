@@ -15,7 +15,6 @@ public class Run {
 		u1.inputValue("user02", "이순신", 30, 98.45);
 		u1.inform();
 		
-		
 		// 매개변수는 타입 즉 자료형만을 확인한다.
 		User u2 = new User("user03", "김철수", 35, 52.2);
 		u2.inform();

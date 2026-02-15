@@ -142,11 +142,148 @@ public class ControlPractice {
 		}
 	}
 	
+	public void method7() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("키를 입력해주세요 : ");
+		double hi = sc.nextDouble();
+		System.out.print("몸무게를 입력해주세요 : ");
+		double we = sc.nextDouble();
+		
+		double BMI = we/(hi*hi);
+		System.out.println("BMI 지수 : "+ BMI);
+		
+		if(BMI < 18.5) {
+			System.out.println("저체중");
+		} else if(BMI <23) {
+			System.out.println("정상체중");
+		} else if(BMI <25) {
+			System.out.println("과체중");
+		} else if(BMI <30) {
+			System.out.println("비만");
+		} else {
+			System.out.println("비만");
+		}
+		
+		
+	}
 	
+	public void method8() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("피연산자1 입력 : ");
+		int num1 = sc.nextInt();
+		System.out.print("피연산자2 입력 : ");
+		int num2 = sc.nextInt();
+		sc.nextLine();
+		System.out.print("연산자 입력(+, -, *, /, % ) : ");
+		char a = sc.nextLine().charAt(0);
+		
+		if(num1 >0 && num2>0) {
+			
+			switch(a) {
+			case '+':
+				System.out.printf("%d + %d = %d", num1, num2, (num1+num2));
+				break;
+			case '-':
+				System.out.printf("%d - %d = %d", num1, num2, (num1-num2));
+				break;
+			case '*':
+				System.out.printf("%d * %d = %d", num1, num2, (num1*num2));
+				break;
+			case '/':
+				System.out.printf("%d / %d = %d", num1, num2, (num1/num2));
+				break;
+			case '%':
+				System.out.printf("%d %% %d = %d", num1, num2, (num1%num2));
+				break;
+			default :
+				System.out.println("잘못 입력 프로그램 종료");
+		}
+		
+		} else {
+			System.out.println("양수를 입력하세요");
+		}
+	}
+	
+	public void method9() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("중간 고사 점수 : ");
+		int mid = sc.nextInt();
+		System.out.print("기말 고사 점수 : ");
+		int end = sc.nextInt();
+		System.out.print("과제 점수 : ");
+		int hw = sc.nextInt();
+		System.out.print("출석 회수 : ");
+		int at = sc.nextInt();
+		
+		System.out.println("================= 결과 =================");
+		if (!(at < 20 * 0.7)) { // 30% 이상 결석 시 Fail이므로
+
+			System.out.println("중간 고사 점수(20) : " + mid * 0.2);
+			System.out.println("기말 고사 점수(30) : " + end * 0.3);
+			System.out.println("과제 점수       (30) : " + hw * 0.3);
+			System.out.println("출석 점수       (20) : " + (at / 20.0 * 100 * 0.2));
+
+			double sum = mid * 0.2 + end * 0.3 + hw * 0.3 + (at / 20.0 * 100 * 0.2);
+			// attendance / 20.0 * 100 은 총 출석한 날짜를 가지고 100점 만점으로 환산하는 계산
+
+			System.out.println("총점 : " + sum);
+
+			if (sum >= 70) {
+				System.out.println("PASS");
+			} else {
+				System.out.println("Fail [점수 미달]");
+			}
+		} else {
+			System.out.println("Fail [출석 회수 부족 (" + at + "/20)]");
+		}
+	}
+	
+	public void method10() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("실행할 기능을 선택하세요");
+		System.out.println("1. 메뉴 출력");
+		System.out.println("2. 짝수/홀수");
+		System.out.println("3. 합격/불합격");
+		System.out.println("4. 계절");
+		System.out.println("5. 로그인");
+		System.out.println("6.권한 확인");
+		System.out.println("7. BMI");
+		System.out.println("8. 계산기");
+		System.out.println("9. P/F");
+		System.out.print("선택 : ");
+		int num = sc.nextInt();
+		
+		switch(num) {
+		case 1 : method1(); break;
+		case 2 : method2(); break;
+		case 3 : method3(); break;
+		case 4 : method4(); break;
+		case 5 : method5(); break;
+		case 6 : method6(); break;
+		case 7 : method7(); break;
+		case 8 : method8(); break;
+		case 9 : method9(); break;
+		default:
+			System.out.println("잘못 입력했습니다");
+		}
+		
+		
+		
+	}
 	
 	
 	
 	
 	
 
-}
+		
+	}
+	
+	
+	
+	
+	
+
+
