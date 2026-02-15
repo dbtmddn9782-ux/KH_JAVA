@@ -17,7 +17,7 @@ public class Run {
 //		cp.method10();
 		
 		LoopPractice lp = new LoopPractice();
-		lp.method10();
+		lp.method11();
 		
 
 		

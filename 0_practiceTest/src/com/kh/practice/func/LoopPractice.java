@@ -211,6 +211,23 @@ public class LoopPractice {
 		}
 	}
 	
+	public void method11() {
+		
+		Scanner sc =  new Scanner(System.in);
+		System.out.print("시작 숫자 : ");
+		int num1 = sc.nextInt();
+		System.out.print("공차 : ");
+		int plus = sc.nextInt();
+		
+		
+		for(int i = 1 ; i <=10 ;i++) {
+			System.out.print(num1 + " ");
+			num1 += plus;  //다음 값 = 이전 값 + 공차    num1 = num1 + plus
+		}
+		
+		
+	}
+	
 	
 	
 	
