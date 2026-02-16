@@ -219,10 +219,41 @@ public class LoopPractice {
 		System.out.print("공차 : ");
 		int plus = sc.nextInt();
 		
-		
 		for(int i = 1 ; i <=10 ;i++) {
 			System.out.print(num1 + " ");
 			num1 += plus;  //다음 값 = 이전 값 + 공차    num1 = num1 + plus
+		}
+	}
+	
+	public void methdo12() {
+		
+		
+	}
+	
+	public void method13() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		for(int i = 1; i<= num; i++) {
+				for(int j = 1; j <=i ; j++) {
+					System.out.print("*");
+				}System.out.println();
+			}
+	}
+	
+	public void method14() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		for(int i = num; i>0 ; i--) {
+			for(int j = i; j>0; j--) {
+				System.out.print("*");
+			}
+			System.out.println("");
 		}
 		
 		

@@ -1,6 +1,6 @@
 package com.kh.practice.run;
 
-import com.kh.practice.func.LoopPractice;
+import com.kh.practice.func.ArrayPractice;
 
 public class Run {
 	public static void main(String[] args) {
@@ -16,8 +16,11 @@ public class Run {
 //		ControlPractice cp = new ControlPractice();
 //		cp.method10();
 		
-		LoopPractice lp = new LoopPractice();
-		lp.method11();
+//		LoopPractice lp = new LoopPractice();
+//		lp.method14();
+		
+		ArrayPractice ap = new ArrayPractice();
+		ap.method8();
 		
 
 		
